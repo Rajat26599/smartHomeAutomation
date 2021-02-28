@@ -16,6 +16,9 @@
   </head>
   <body>
     <div class="jumbotron">
+      <a href="{% url 'accounts:logout' %}">
+        <button class="btn btn-primary" id="logoutBtn" type="button" name="button">Logout</button>
+      </a>
       <h1>My Home: Dashboard</h1>
       <p class="lead">Keep your home-control in your hands.</p>
     </div>
@@ -30,11 +33,11 @@
 
       <div class="row">
 
-        <div class="col-sm-6">
+        <div class="col-6">
           <h6>Kitchen</h6>
         </div>
 
-        <div class="col-sm-6">
+        <div class="col-6">
           <button type="button" class="btn btn-lg btn-toggle" data-toggle="button" aria-pressed="false" autocomplete="off">
             <div class="handle"></div>
           </button>
@@ -55,11 +58,11 @@
 
         <div class="row">
 
-          <div class="col-sm-6">
+          <div class="col-6">
             <h6>BedRoom</h6>
           </div>
 
-          <div class="col-sm-6">
+          <div class="col-6">
             <button type="button" class="btn btn-lg btn-toggle" data-toggle="button" aria-pressed="false" autocomplete="off">
               <div class="handle"></div>
             </button>
@@ -80,11 +83,11 @@
 
           <div class="row">
 
-            <div class="col-sm-6">
+            <div class="col-6">
               <h6>Dining Room</h6>
             </div>
 
-            <div class="col-sm-6">
+            <div class="col-6">
               <button type="button" class="btn btn-lg btn-toggle" data-toggle="button" aria-pressed="false" autocomplete="off">
                 <div class="handle"></div>
               </button>
