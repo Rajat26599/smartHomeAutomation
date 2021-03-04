@@ -19,7 +19,7 @@
       <a href="{% url 'accounts:logout' %}">
         <button class="btn btn-primary" id="logoutBtn" type="button" name="button">Logout</button>
       </a>
-      <h1>My Home: Dashboard</h1>
+      <h1>{{user.get_username|title}}'s Home: Dashboard</h1>
       <p class="lead">Keep your home-control in your hands.</p>
     </div>
 

@@ -18,8 +18,10 @@ body {
   transform: scale(1.1);
 }
 .jumbotron {
-  background: #6b7381;
-  color: #bdc1c8;
+  /* background: #6b7381; */
+  background: #21d1b7;
+  /* color: #bdc1c8; */
+  color: #eee;
 }
 .jumbotron h1 {
   color: #fff;

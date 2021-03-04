@@ -4,11 +4,22 @@ from django.contrib.auth.models import User
 from django import forms
 
 class UserForm(forms.ModelForm):
-    pasword = forms.CharField()
+    password = forms.CharField(widget=forms.PasswordInput(attrs={'class': 'form-control', 'placeholder':'Password'}))
+
+    def __init__(self, *args, **kwargs):
+        super(UserForm, self).__init__(*args, **kwargs)
+        self.fields['username'].label = ''
+        self.fields['email'].label = ''
+        self.fields['password'].label = ''
 
     class Meta():
         model = User
         fields = ('username','email','password')
+
+        widgets = {
+            'username': forms.TextInput(attrs = {'class':'form-control', 'placeholder': 'Username'}),
+            'email': forms.EmailInput(attrs = {'class':'form-control', 'placeholder': 'Email address'}),
+        }
 
 
 # class UserCreateForm(UserCreationForm):

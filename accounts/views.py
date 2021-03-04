@@ -23,8 +23,11 @@ def register(request):
             user.save()
 
             registered = True
+            return HttpResponseRedirect(reverse('accounts:user_login'))
+
         else:
             print(user_form.errors)
+
     else:
         user_form = UserForm()
 
@@ -54,10 +57,10 @@ def user_login(request):
     else:
         return render(request, 'accounts/login.html', {})
 
-@login_required
+@login_required(login_url='/accounts/user_login/')
 def user_logout(request):
     logout(request)
-    return HttpResponseRedirect(reverse('accounts:register'))
+    return HttpResponseRedirect(reverse('accounts:user_login'))
 
 # class SignUp(CreateView):
 #     form_class = forms.UserCreateForm
